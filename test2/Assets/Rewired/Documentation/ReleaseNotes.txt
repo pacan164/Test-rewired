@@ -1,3 +1,13 @@
+1.1.62.4:
+
+    Bug Fixes:
+      - Windows Standalone, Raw Input: Prevent extremely rare IndexOutOfRangeException caused by race condition if a device is connected at the exact instance in between calls to GetRawInputDeviceList when enumerating Raw Input devices.
+
+1.1.62.3:
+
+    Modified Controller Definitions:
+      - Nintendo Switch Pro Controller: Added Android variant with different name and mappings.
+
 1.1.62.2:
 
     Bug Fixes:

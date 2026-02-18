@@ -3,16 +3,16 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -2084043497, guid: 09c9b883b79ef864a99683bb36c5776d, type: 3}
   m_Name: ControllerDataFiles
   m_EditorClassIdentifier: 
-  defaultHardwareJoystickMap: {fileID: 11400000, guid: 3cbd233ccf0431c449af2fbcc882f266, type: 2}
+  defaultHardwareJoystickMap: {fileID: 11400000, guid: 3cbd233ccf0431c449af2fbcc882f266,
+    type: 2}
   hardwareJoystickMaps:
   - {fileID: 11400000, guid: 5c669fd16bb10994dbff55501bb6e4e9, type: 2}
   - {fileID: 11400000, guid: 05f66480300b88645aebf9962934d554, type: 2}
@@ -188,8 +188,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b647750ae970617478e5d358cf1b0dbf, type: 2}
   - {fileID: 11400000, guid: 34c2f6cd787b4ff4f89bf9f16f95af81, type: 2}
   - {fileID: 11400000, guid: 770a22fe483520746b98d10d6bfa723b, type: 2}
-  - {fileID: 11400000, guid: 3a941729136d7c745906b76b98e1d551, type: 2}
-  - {fileID: 11400000, guid: ce688c5fbb1e4b34aab274cc62b27363, type: 2}
   joystickTemplates:
   - {fileID: 11400000, guid: 91b946f6f6823f4469dbe63db04db904, type: 2}
   - {fileID: 11400000, guid: fd777f863083e2d4fb0c40f6bcbfdc78, type: 2}

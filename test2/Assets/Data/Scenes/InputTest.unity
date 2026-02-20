@@ -1057,12 +1057,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 489236097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
@@ -1204,7 +1204,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 489236097}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
@@ -1289,6 +1289,42 @@ MonoBehaviour:
   m_Spacing: {x: 10, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!1 &489236096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 489236097}
+  m_Layer: 0
+  m_Name: Global
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &489236097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489236096}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 330585546}
+  - {fileID: 1035121086}
+  - {fileID: 410087041}
+  - {fileID: 1726759680}
+  - {fileID: 832575519}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &537998137
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,12 +2606,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832575517}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 489236097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &857717354
 GameObject:
@@ -3197,6 +3233,52 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1035121085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1035121086}
+  - component: {fileID: 1035121087}
+  m_Layer: 0
+  m_Name: Installer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1035121086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035121085}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1252697080}
+  m_Father: {fileID: 489236097}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1035121087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035121085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdfa02c64e79448587480786487568fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tractorInputBehaviour: {fileID: 1252697079}
 --- !u!1 &1043153411
 GameObject:
   m_ObjectHideFlags: 0
@@ -4397,7 +4479,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1252697080}
   - component: {fileID: 1252697079}
-  - component: {fileID: 1252697081}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -4420,6 +4501,9 @@ MonoBehaviour:
   _tractorInputManager:
     _playerIDProviderConfig: {fileID: 11400000, guid: 00f764e0f29914a4c973ad8e684c7208, type: 2}
     _wheelAxisActionInfoConfig: {fileID: 11400000, guid: de1d5c3f71381e046aa4d147bc23edc8, type: 2}
+    _accelerationActionInfoConfig: {fileID: 11400000, guid: 021a399c1da8d461ab44209c5fc5741d, type: 2}
+    _brakeActionInfoConfig: {fileID: 11400000, guid: bdddc7bdfe27047c5aceb39cc9e18b67, type: 2}
+    _steeringActionInfoConfig: {fileID: 11400000, guid: 101bf591435744964965c8eca32e2993, type: 2}
     _mainNeutralGearActionInfo: {fileID: 11400000, guid: ab05708110ef1f34fa1df3f990ee9878, type: 2}
     _mainFirstGearActionInfo: {fileID: 11400000, guid: 464164efbd1b4944aa40044861538afd, type: 2}
     _mainSecondGearActionInfo: {fileID: 11400000, guid: d75df7ed43d01114abe3c8da0aa89f45, type: 2}
@@ -4430,15 +4514,6 @@ MonoBehaviour:
     _dividerFirstGearActionInfo: {fileID: 11400000, guid: cdabb1685f722d6418cbde4dcda756fd, type: 2}
     _dividerSecondGearActionInfo: {fileID: 11400000, guid: cabd70c224ae1354981edd3ec35afb07, type: 2}
     _dividerThirdGearActionInfo: {fileID: 11400000, guid: e4669e66206060446b6578c3874a2210, type: 2}
-  _onWheelAxisValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  _onMainGearboxStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  _onDividerStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &1252697080
 Transform:
   m_ObjectHideFlags: 0
@@ -4447,27 +4522,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252697078}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1035121086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1252697081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252697078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a8aa27621736614f8b4031054748fb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tractorInputBehaviour: {fileID: 1252697079}
-  _isDebuging: 0
 --- !u!1 &1259519259
 GameObject:
   m_ObjectHideFlags: 0
@@ -5224,12 +5285,12 @@ MonoBehaviour:
         _ruleSets: []
     actions:
     - _id: 4
-      _name: Rotation
+      _name: Wheel
       _type: 0
-      _descriptiveName: Rotation
+      _descriptiveName: Wheel
       _positiveDescriptiveName: Right
       _negativeDescriptiveName: Left
-      _key: rotation
+      _key: wheel
       _positiveKey: 1
       _negativeKey: -1
       _behaviorId: 0
@@ -5242,6 +5303,30 @@ MonoBehaviour:
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
       _key: acceleration
+      _positiveKey: 1
+      _negativeKey: -1
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
+    - _id: 18
+      _name: Brake
+      _type: 0
+      _descriptiveName: Brake
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _key: brake
+      _positiveKey: 1
+      _negativeKey: -1
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
+    - _id: 17
+      _name: Steering
+      _type: 0
+      _descriptiveName: Steering
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _key: steering
       _positiveKey: 1
       _negativeKey: -1
       _behaviorId: 0
@@ -5271,13 +5356,97 @@ MonoBehaviour:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
-    - _id: 10
-      _name: DividerLow
+    - _id: 13
+      _name: GearboxSecond
       _type: 1
-      _descriptiveName: DividerLow
+      _descriptiveName: GearboxSecond
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
-      _key: divider_low
+      _key: gearbox_second
+      _positiveKey: 
+      _negativeKey: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
+    - _id: 12
+      _name: GearboxThird
+      _type: 1
+      _descriptiveName: GearboxThird
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _key: gearbox_Third
+      _positiveKey: 
+      _negativeKey: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
+    - _id: 11
+      _name: GearboxFourth
+      _type: 1
+      _descriptiveName: GearboxFourth
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _key: gearbox_fourth
+      _positiveKey: 
+      _negativeKey: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
+    - _id: 10
+      _name: DividerPressed
+      _type: 1
+      _descriptiveName: DividerPressed
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _key: divider_pressed
+      _positiveKey: 
+      _negativeKey: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
+    - _id: 19
+      _name: DividerNeutral
+      _type: 1
+      _descriptiveName: DividerNeutral
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _key: divider_neutral
+      _positiveKey: 
+      _negativeKey: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
+    - _id: 14
+      _name: DividerFirst
+      _type: 1
+      _descriptiveName: DividerFirst
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _key: divider_First
+      _positiveKey: 
+      _negativeKey: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
+    - _id: 16
+      _name: DividerSecond
+      _type: 1
+      _descriptiveName: DividerSecond
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _key: divider_second
+      _positiveKey: 
+      _negativeKey: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
+    - _id: 15
+      _name: DividerThrid
+      _type: 1
+      _descriptiveName: DividerThird
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _key: divider_third
       _positiveKey: 
       _negativeKey: 
       _behaviorId: 0
@@ -5317,7 +5486,7 @@ MonoBehaviour:
     actionCategoryMap:
       list:
       - categoryId: 0
-        actionIds: 040000000500000006000000070000000a0000000800000009000000
+        actionIds: 0400000005000000120000001100000006000000070000000d0000000c0000000b0000000a000000130000000e000000100000000f0000000800000009000000
     inputBehaviors:
     - _id: 0
       _name: Default
@@ -6265,7 +6434,7 @@ MonoBehaviour:
     controllerMapLayoutManagerRuleSets: []
     controllerMapEnablerRuleSets: []
     playerIdCounter: 2
-    actionIdCounter: 11
+    actionIdCounter: 20
     actionCategoryIdCounter: 3
     inputBehaviorIdCounter: 1
     mapCategoryIdCounter: 2
@@ -6289,12 +6458,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726759678}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 489236097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1726759681
 MonoBehaviour:
@@ -6735,37 +6904,6 @@ RectTransform:
   m_AnchoredPosition: {x: 355, y: -13.405}
   m_SizeDelta: {x: 710, y: 26.81}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2032459314
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2032459315}
-  m_Layer: 0
-  m_Name: Viewer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2032459315
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032459314}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2038804396
 GameObject:
   m_ObjectHideFlags: 0
@@ -7091,61 +7229,11 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!1 &2142475508
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2142475510}
-  - component: {fileID: 2142475509}
-  m_Layer: 0
-  m_Name: EventListener
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2142475509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142475508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a375317f904434f86614d49882ee893, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &2142475510
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142475508}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 330585546}
-  - {fileID: 410087041}
-  - {fileID: 832575519}
-  - {fileID: 1726759680}
-  - {fileID: 1252697080}
-  - {fileID: 2142475510}
-  - {fileID: 2032459315}
+  - {fileID: 489236097}
   - {fileID: 75736387}
   - {fileID: 813303957}
   - {fileID: 61545160}

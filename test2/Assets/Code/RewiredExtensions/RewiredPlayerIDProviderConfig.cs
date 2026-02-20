@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Code.Configs;
+using UnityEngine;
 
-namespace Code.TractorSimulatorInput
+namespace Code.TractorInput
 {
     [CreateAssetMenu(menuName = "Configs/PlayerID", fileName = "New Player ID")]
     public class RewiredPlayerIDProviderConfig : Config

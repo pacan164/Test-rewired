@@ -3,18 +3,22 @@ using Rewired;
 using UniRx;
 using UnityEngine;
 
-namespace Code.TractorSimulatorInput
+namespace Code.TractorInput.Systems
 {
     [Serializable]
-    public class TractorInputManager : IDisposable
+    public class TractorInputManager
     {
         [SerializeField] private RewiredPlayerIDProviderConfig _playerIDProviderConfig;
         
         [Header("Wheel")]
         [SerializeField] private RewiredActionInfoConfig _wheelAxisActionInfoConfig;
         
+        [Header("Pedals")]
+        [SerializeField] private RewiredActionInfoConfig _accelerationActionInfoConfig;
+        [SerializeField] private RewiredActionInfoConfig _brakeActionInfoConfig;
+        [SerializeField] private RewiredActionInfoConfig _steeringActionInfoConfig;
+        
         [Header("MainGearbox")]
-        [SerializeField] private RewiredActionInfoConfig _mainNeutralGearActionInfo;
         [SerializeField] private RewiredActionInfoConfig _mainFirstGearActionInfo;
         [SerializeField] private RewiredActionInfoConfig _mainSecondGearActionInfo;
         [SerializeField] private RewiredActionInfoConfig _mainThirdGearActionInfo;
@@ -22,7 +26,6 @@ namespace Code.TractorSimulatorInput
         
         [Header("GearboxDivider")]
         [SerializeField] private RewiredActionInfoConfig _dividerPressedConfig;
-        [SerializeField] private RewiredActionInfoConfig _dividerNeutralGearActionInfo;
         [SerializeField] private RewiredActionInfoConfig _dividerFirstGearActionInfo;
         [SerializeField] private RewiredActionInfoConfig _dividerSecondGearActionInfo;
         [SerializeField] private RewiredActionInfoConfig _dividerThirdGearActionInfo;
@@ -30,6 +33,9 @@ namespace Code.TractorSimulatorInput
         private Player _player;
 
         public FloatReactiveProperty WheelAxis { get; private set; } = new();
+        public FloatReactiveProperty Acceleration { get; private set; } = new();
+        public FloatReactiveProperty Brake { get; private set; } = new();
+        public FloatReactiveProperty Steering { get; private set; } = new();
         public BoolReactiveProperty MainNeutralGear { get; private set; } = new();
         public BoolReactiveProperty MainFirstGear { get; private set; } = new();
         public BoolReactiveProperty MainSecondGear { get; private set; } = new();
@@ -49,31 +55,22 @@ namespace Code.TractorSimulatorInput
         public void Tick()
         {
             WheelAxis.Value = _player.GetAxis(_wheelAxisActionInfoConfig.ActionName);
-            MainNeutralGear.Value = _player.GetButtonDown(_mainNeutralGearActionInfo.ActionName);
+            
+            Acceleration.Value = _player.GetAxis(_accelerationActionInfoConfig.ActionName);
+            Brake.Value = _player.GetAxis(_brakeActionInfoConfig.ActionName);   
+            Steering.Value = _player.GetAxis(_steeringActionInfoConfig.ActionName);
+            
             MainFirstGear.Value = _player.GetButtonDown(_mainFirstGearActionInfo.ActionName);
             MainSecondGear.Value = _player.GetButtonDown(_mainSecondGearActionInfo.ActionName);
             MainThirdGear.Value = _player.GetButtonDown(_mainThirdGearActionInfo.ActionName);
             MainFourthGear.Value = _player.GetButtonDown(_mainFourthGearActionInfo.ActionName);
+            MainNeutralGear.Value = !(MainFirstGear.Value || MainSecondGear.Value || MainThirdGear.Value || MainFourthGear.Value);
+            
             DividerPressed.Value = _player.GetButtonDown(_dividerPressedConfig.ActionName);
-            DividerNeutralGear.Value = _player.GetButtonDown(_dividerNeutralGearActionInfo.ActionName);
             DividerFirstGear.Value = _player.GetButtonDown(_dividerFirstGearActionInfo.ActionName);
             DividerSecondGear.Value = _player.GetButtonDown(_dividerSecondGearActionInfo.ActionName);
             DividerThirdGear.Value = _player.GetButtonDown(_dividerThirdGearActionInfo.ActionName);
-        }
-
-        public void Dispose()
-        {
-            WheelAxis?.Dispose();
-            MainNeutralGear?.Dispose();
-            MainFirstGear?.Dispose();
-            MainSecondGear?.Dispose();
-            MainThirdGear?.Dispose();
-            MainFourthGear?.Dispose();
-            DividerPressed?.Dispose();
-            DividerNeutralGear?.Dispose();
-            DividerFirstGear?.Dispose();
-            DividerSecondGear?.Dispose();
-            DividerThirdGear?.Dispose();
+            DividerNeutralGear.Value = !(DividerFirstGear.Value || DividerSecondGear.Value || DividerThirdGear.Value);
         }
     }
 }

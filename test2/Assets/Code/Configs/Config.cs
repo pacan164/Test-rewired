@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Code.TractorSimulatorInput
+namespace Code.Configs
 {
     public class Config : ScriptableObject { }
 }

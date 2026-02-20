@@ -1,4 +1,4 @@
-﻿namespace Code.TractorSimulatorInput
+﻿namespace Code.TractorInput.Transmissions
 {
     public enum MainGearboxTransmissions
     {

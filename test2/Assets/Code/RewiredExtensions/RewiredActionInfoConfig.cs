@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Code.Configs;
+using UnityEngine;
 
-namespace Code.TractorSimulatorInput
+namespace Code.TractorInput
 {
     [CreateAssetMenu(menuName = "Configs/ActionInfo", fileName = "New Action Info")]
     public class RewiredActionInfoConfig : Config

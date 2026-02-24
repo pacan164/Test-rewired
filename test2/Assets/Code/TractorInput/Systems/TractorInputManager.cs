@@ -60,16 +60,16 @@ namespace Code.TractorInput.Systems
             Brake.Value = _player.GetAxis(_brakeActionInfoConfig.ActionName);   
             Steering.Value = _player.GetAxis(_steeringActionInfoConfig.ActionName);
             
-            MainFirstGear.Value = _player.GetButtonDown(_mainFirstGearActionInfo.ActionName);
-            MainSecondGear.Value = _player.GetButtonDown(_mainSecondGearActionInfo.ActionName);
-            MainThirdGear.Value = _player.GetButtonDown(_mainThirdGearActionInfo.ActionName);
-            MainFourthGear.Value = _player.GetButtonDown(_mainFourthGearActionInfo.ActionName);
+            MainFirstGear.Value = _player.GetButton(_mainFirstGearActionInfo.ActionName);
+            MainSecondGear.Value = _player.GetButton(_mainSecondGearActionInfo.ActionName);
+            MainThirdGear.Value = _player.GetButton(_mainThirdGearActionInfo.ActionName);
+            MainFourthGear.Value = _player.GetButton(_mainFourthGearActionInfo.ActionName);
             MainNeutralGear.Value = !(MainFirstGear.Value || MainSecondGear.Value || MainThirdGear.Value || MainFourthGear.Value);
             
-            DividerPressed.Value = _player.GetButtonDown(_dividerPressedConfig.ActionName);
-            DividerFirstGear.Value = _player.GetButtonDown(_dividerFirstGearActionInfo.ActionName);
-            DividerSecondGear.Value = _player.GetButtonDown(_dividerSecondGearActionInfo.ActionName);
-            DividerThirdGear.Value = _player.GetButtonDown(_dividerThirdGearActionInfo.ActionName);
+            DividerPressed.Value = _player.GetButton(_dividerPressedConfig.ActionName);
+            DividerFirstGear.Value = _player.GetButton(_dividerFirstGearActionInfo.ActionName);
+            DividerSecondGear.Value = _player.GetButton(_dividerSecondGearActionInfo.ActionName);
+            DividerThirdGear.Value = _player.GetButton(_dividerThirdGearActionInfo.ActionName);
             DividerNeutralGear.Value = !(DividerFirstGear.Value || DividerSecondGear.Value || DividerThirdGear.Value);
         }
     }

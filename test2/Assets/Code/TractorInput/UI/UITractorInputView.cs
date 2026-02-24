@@ -15,12 +15,14 @@ namespace Code.TractorInput.UI
         [SerializeField] private UITractorMainGearboxView _mainGearboxView;
         [SerializeField] private UITractorDividerGearboxView _dividerGearboxView;
         
-        private readonly TractorInputPresenter _presenter = ServiceLocator.Instance.Resolve<TractorInputPresenter>();
+        private TractorInputPresenter _presenter;
         
         private CompositeDisposable _disposables = new ();
         
         private void Start()
         {
+            _presenter = ServiceLocator.Instance.Resolve<TractorInputPresenter>();
+            
             _presenter.WheelAxisValue
                 .Subscribe(_wheelView.UpdateWheel)
                 .AddTo(_disposables);
